@@ -1,114 +1,82 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+* Sample React Native App
+* https://github.com/facebook/react-native
+*
+* @format
+* @flow strict-local
+*/
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import { StyleSheet, Button, View, SafeAreaView, Text, Alert, TouchableOpacity, ImageBackground } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+function Separator() {
+  return <View style={styles.separator} />;
+}
 
-const App: () => React$Node = () => {
+const image = { url: '/Users/virginialadd/projects/wet-tits/wetTits/ios/assets/abs-bg.jpg' };
+
+export default function App() {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={ styles.container }>
+      <ImageBackground source={ image }  style={ styles.image } >
+      <View>
+        <TouchableOpacity style={ styles.buttonTop } >
+          <Text style={{ fontSize: 32, color: 'lightgray' }}>Train Today</Text>
+        </TouchableOpacity>
+      </View>
+      <Separator />
+      <View>
+        <TouchableOpacity style={ styles.buttonBottom } >
+          <Text style={{ fontSize: 32, color: 'lightgray' }}>Run Today</Text>
+        </TouchableOpacity>
+      </View>
+      </ImageBackground>
+    </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 2,
+    marginHorizontal: 16,
+    color: '#000',
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: 'lightgray',
+    borderBottomWidth: 2,
+    height: 20,
+    width: '90%',
+    marginLeft: '10%'
   },
-  body: {
-    backgroundColor: Colors.white,
+  image: {
+    flex: 1,
+    resizeMode: 'cover',
+    marginTop: '-20%',
+    width: '110%',
+    marginLeft: '-10%',
+    height: '110%'
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  buttonTop: {
+    height: 100,
+    backgroundColor: 'black',
+    alignItems: 'center',
+    borderTopRightRadius: 50,
+    borderTopLeftRadius: 50,
+    marginTop: '100%',
+    justifyContent:'center',
+    width: '90%',
+    marginLeft: '10%'
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  buttonBottom: {
+    height: 100,
+    backgroundColor: 'black',
+    alignItems: 'center',
+    borderBottomRightRadius: 50,
+    borderBottomLeftRadius: 50,
+    justifyContent:'center',
+    marginTop: 20,
+    width: '90%',
+    marginLeft: '10%'
   },
 });
-
-export default App;
