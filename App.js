@@ -13,7 +13,7 @@ function Separator() {
   return <View style={styles.separator} />;
 }
 
-const image = { url: '/Users/virginialadd/projects/wet-tits/wetTits/assets/abs-bg.jpg' };
+const image = { url: '/Users/virginialadd/projects/wet-tits/wetTits/ios/assets/abs-bg.jpg' };
 
 export default function App() {
   return (
