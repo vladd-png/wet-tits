@@ -47,12 +47,15 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     height: 20,
     width: '90%',
-    marginLeft: '5%'
+    marginLeft: '10%'
   },
   image: {
     flex: 1,
     resizeMode: 'cover',
-    marginTop: '-20%'
+    marginTop: '-20%',
+    width: '110%',
+    marginLeft: '-10%',
+    height: '110%'
   },
   buttonTop: {
     height: 100,
@@ -63,7 +66,7 @@ const styles = StyleSheet.create({
     marginTop: '100%',
     justifyContent:'center',
     width: '90%',
-    marginLeft: '5%'
+    marginLeft: '10%'
   },
   buttonBottom: {
     height: 100,
@@ -74,6 +77,6 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     marginTop: 20,
     width: '90%',
-    marginLeft: '5%'
+    marginLeft: '10%'
   },
 });
