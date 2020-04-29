@@ -18,7 +18,7 @@ const image = { url: '/Users/virginialadd/projects/wet-tits/wetTits/assets/abs-b
 export default function App() {
   return (
     <SafeAreaView style={ styles.container }>
-    <ImageBackground source={ image } style={ styles.image } />
+      <ImageBackground source={ image }  style={ styles.image } >
       <View>
         <TouchableOpacity style={ styles.buttonTop } >
           <Text style={{ fontSize: 32, color: 'lightgray' }}>Train Today</Text>
@@ -30,6 +30,7 @@ export default function App() {
           <Text style={{ fontSize: 32, color: 'lightgray' }}>Run Today</Text>
         </TouchableOpacity>
       </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 }
@@ -47,8 +48,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    resizeMode: 'stretch',
-    zIndex: 1,
+    resizeMode: 'cover',
+    marginTop: '-30%',
   },
   buttonTop: {
     height: 100,
@@ -57,7 +58,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 50,
     borderTopLeftRadius: 50,
     justifyContent:'center',
-    zIndex: 10,
   },
   buttonBottom: {
     height: 100,
@@ -66,6 +66,5 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 50,
     borderBottomLeftRadius: 50,
     justifyContent:'center',
-    zIndex: 10,
   },
 });
