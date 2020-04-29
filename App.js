@@ -45,11 +45,14 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     borderBottomColor: 'lightgray',
     borderBottomWidth: 2,
+    height: 20,
+    width: '90%',
+    marginLeft: '5%'
   },
   image: {
     flex: 1,
     resizeMode: 'cover',
-    marginTop: '-30%',
+    marginTop: '-20%'
   },
   buttonTop: {
     height: 100,
@@ -57,7 +60,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopRightRadius: 50,
     borderTopLeftRadius: 50,
+    marginTop: '100%',
     justifyContent:'center',
+    width: '90%',
+    marginLeft: '5%'
   },
   buttonBottom: {
     height: 100,
@@ -66,5 +72,8 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 50,
     borderBottomLeftRadius: 50,
     justifyContent:'center',
+    marginTop: 20,
+    width: '90%',
+    marginLeft: '5%'
   },
 });
