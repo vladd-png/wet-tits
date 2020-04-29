@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     marginVertical: 8,
-    borderBottomColor: 'lightgray',
+    borderBottomColor: 'gray',
     borderBottomWidth: 2,
     height: 20,
     width: '90%',
